@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google字型 -->
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+    <title>文字</title>
+    <style>
+        :root {
+            font-size: 16px;
+        }
+
+        body {
+            /* 對整份文件做字型設定 */
+            font-family: "微軟正黑體", "Sixtyfour Convergence", sans-serif;
+            /* font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "BLED" 0,
+                "SCAN" 0,
+                "XELA" 0,
+                "YELA" 0; */
+            font-size: 20px;
+        }
+
+        /* 局部設定 */
+        .font-style {
+            /* 單位可以是px,rem,em... */
+            font-size: 30px;
+            /* 設定斜體 */
+            font-style: italic;
+            /* 設定粗體 100~900,bold,bolder*/
+            font-weight: bold;
+            /* 字型家族 */
+            /* 如果使用者的系統有第一個字型就使用,沒有就用第二個,以此類推 */
+            font-family: '微軟正黑體',
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+        /* 設定google字型的font-family */
+        .Google-Font {
+            font-family: "Delius", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+        }
+
+        .text-style {
+            /* 文字置中 */
+            text-align: center;
+            font-size: 30px;
+            /* underline , overline,line-through */
+            text-decoration: underline;
+            /* 第一行文字的縮排 */
+            text-indent: 100px;
+            /* 英文字母或中文字的間隔 */
+            list-style-position: 50px;
+            /* 單字之間的間隔,中文字比較難用到的屬性, */
+            word-spacing: 50px;
+            /* 行高,可以設定單位值, */
+            line-height: 50px;
+            /* 也可設定倍數(無單位) */
+            /* line-height: 2; */
+        }
+
+        .text-shadow {
+            font-size: 100px;
+            /* 水平位移(+為右,-為左),垂直位移(+為下,-為上),模糊半徑,顏色 */
+            text-shadow:
+                15px 16px 7px #8BC34A,
+                /* 多重陰影 組跟組織間用逗點隔開 */
+                -10px -20px 7px rgba(146, 20, 20, 0.663);
+        }
+
+        /* css generator 產生器,可以先在產生器知道外觀長甚麼樣子,看了喜歡就複製貼上 */
+    </style>
+
+</head>
+
+<body>
+    <!-- 
+    10進位 0~9
+    32 2*1(個位數) + 10*3(十位數) = 32
+    16進位 0~9 A(10),B(11),C(12),D(13),E(14),F(15)
+    1A => 10*1(個位數)+ 16*1=26
+    FF => 255 => 15*1 + 15*16= 255
+    -->
+    <h1>1.Font 樣式設定</h1>
+    <div class="font-style">
+        星期四<br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident blanditiis nihil ipsum ratione ipsa!
+        Repudiandae veritatis quaerat quam voluptate voluptatem assumenda, corrupti iste numquam animi reprehenderit
+        aperiam maxime architecto aliquam.
+    </div>
+    <h2>2.Google-Font</h2>
+    <div class="Google-Font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium temporibus, odio iure ullam at
+        obcaecati sint voluptatem ducimus. Nulla rem, expedita natus reprehenderit porro cum. Ad accusantium culpa illo.
+    </div>
+    <h2>3.text 樣式設定</h2>
+    <div class="text-style">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste ab eligendi facere, cumque distinctio
+        placeat, animi ipsum quis adipisci, amet ratione sint omnis? Vitae accusamus modi expedita corporis pariatur!
+    </div>
+    <hr>
+    <h2>4.文字陰影</h2>
+    <p class="text-shadow">PHP it the best</p>
+    <hr>
+    <h2>5. rem 與 em 差異</h2>
+    <h3>rem</h3>
+    <p>為root 預設為font-size 的倍數 預設為16px</p>
+    <p>:root選擇器,指的是根元素html</p>
+    <div style="font-size: 1rem;">
+        font
+        <div style="font-size: 2rem;">
+            font
+            <div style="font-size: 3rem;">font</div>
+        </div>
+    </div>
+    <hr>
+    <h3>em</h3>
+    <p>可能為父層或祖先層 font-size 倍數</p>
+    <p>父層若有設定文字尺寸以它為準,沒有會繼續往外找.</p>
+    <div style="font-size: 1em;">
+        font
+        <div style="font-size: 2em;">
+            font
+            <div style="font-size: 3em;">font</div>
+        </div>
+    </div>
+</body>
+
+</html>
